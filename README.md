@@ -3,4 +3,8 @@ This is a 3-unit course required in the Diploma of Computer Science program of U
 
 I created this Repository to keep my notes on Eloquent JavaScript (http://eloquentjavascript.net/).
 
-Navigate to 'js' folder to view my scripts per Chapter on Eloquent JavaScript.
+Navigate to 'js' folder to view my scripts and notes for each Chapter in Eloquent JavaScript.
+
+Navigate to 'assignment' folder to view my assignments. Note that I may publish my answers after the Submission date.
+
+
