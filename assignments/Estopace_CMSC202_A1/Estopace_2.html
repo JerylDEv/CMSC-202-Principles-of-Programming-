@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500
+        }
+    </style>
+</head>
+
+<body>
+    <b>
+        <center>Sample Script Example</center>
+    </b>
+    <br />Enter first number:
+    <input type="text" id="txt1" name="text1">Enter second number:
+    <input type="text" id="txt2" name="text2">
+    <p id="demo"></p>
+    <br>
+    <form>
+        Please enter your birthday <input type="date" id="date_of_birth">
+        <p>You are <span id="display_age_box">0</span> days old.</p>
+    </form>
+    <script>
+        console.log('Connected');
+
+        function myFunction() {
+            var mytextbox1 = document.getElementById("txt1").value;
+            var mytextbox2 = document.getElementById("txt2").value;
+            var result = mytextbox1 * mytextbox2;
+            document.getElementById("demo").innerHTML = result;
+        }
+
+        // Birthday from 1/1/1970 in Milliseconds
+        var dateInput = document.getElementById('date_of_birth');
+
+        // I need to add a listener for the change of the birthday input to avoid 'Invalid Date' Error.
+        dateInput.addEventListener("change", function() {
+            // Recognize the date input
+            var dateInput = this.value;
+
+            // Amount of time in milliseconds (from 1/1/1970 to Birthday) to the timeBirth variable
+            var birthday = new Date(dateInput);
+            var timeBirth = birthday.getTime();
+
+            // Amount of time in milliseconds (from 1/1/1970 to Today) to the timeCurrent variable
+            var today = new Date();
+            var timeCurrent = today.getTime();
+
+            // Calculate Days
+            function compareTimes(current, previous) {
+                // Since getTime() the amount of time since 1/1/1970 in milliseconds 
+                // I need to divide the result by days in milliseconds
+                var sec = 1000 // 1000 milliseconds
+                var min = 60 * sec // 60 seconds
+                var hour = 60 * min // 60 minutes
+                var day = 24 * hour // 24 hours
+
+                // Calculation
+                result = (current - previous) / day;
+
+                // Return a rounded and formatted the result.
+                return Math.round(result).toLocaleString();
+            }
+
+            // Display change to display_age_box in HTML
+            var display = document.getElementById('display_age_box');
+            var numOfDays = `${compareTimes(timeCurrent, timeBirth)}`;
+            display.innerHTML = numOfDays;
+        })
+    </script>
+    <center>
+        <p>Click the button below</p>
+        <button onclick="myFunction()">Click here for multiply</button>
+        <br />
+    </center>
+    <p id="demo"></p>
+</body>
+
+</html>

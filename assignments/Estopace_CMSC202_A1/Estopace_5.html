@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        table,
+        th,
+        input {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        
+        tr#buttons>th:hover {
+            background-color: orange
+        }
+        
+        th.blue {
+            background-color: lightblue
+        }
+        
+        th.yellow {
+            background-color: yellow
+        }
+    </style>
+</head>
+
+<body>
+    <b>
+        <center>Sample Script Example</center>
+    </b>
+    <br />Enter first number:
+    <input type="text" id="txt1" name="text1">Enter second number:
+    <input type="text" id="txt2" name="text2">
+    <p id="demo"></p>
+    <br>
+    <table>
+        <col width="150">
+        <col width="150">
+        <col width="150">
+        <col width="150">
+        <tr>
+            <th colSpan="3">Please Enter First Number</th>
+            <td colSpan="1"><input type="number" id="first_num" value="0"></td>
+        </tr>
+        <tr>
+            <th colSpan="3">Please Enter Second Number</th>
+            <td colSpan="1"><input type="number" id="second_num" value="0"></td>
+        </tr>
+        <tr>
+            <th colSpan="4">Click Below</th>
+        </tr>
+        <tr id="buttons">
+            <th class="blue" onclick="add()">ADD</th>
+            <th class="yellow" onclick="subtract()">Subtract</th>
+            <th class="blue" onclick="multiply()">Multiply</th>
+            <th class="yellow" onclick="divide()">Divide</th>
+        </tr>
+        <tr>
+            <td>Result</td>
+            <td colSpan="3" id="display_result"></td>
+        </tr>
+    </table>
+    <script>
+        console.log('Connencted');
+
+        function myFunction() {
+            var mytextbox1 = document.getElementById("txt1").value;
+            var mytextbox2 = document.getElementById("txt2").value;
+            var result = mytextbox1 * mytextbox2;
+            document.getElementById("demo").innerHTML = result;
+        }
+
+        function add() {
+            // Detect Inputs
+            var firstNum = document.getElementById('first_num').value;
+            var secondNum = document.getElementById('second_num').value;
+
+            // Results Variable
+            var result = 0;
+
+            // Addition Operator Function
+            function add(num1, num2) {
+                result = parseFloat(num1) + parseFloat(num2);
+                console.log(result);
+                return result
+            }
+
+            // Execute the Addition Function
+            add(firstNum, secondNum)
+
+            // Display Result
+            display(result)
+        }
+
+        function subtract() {
+            // Detect Inputs
+            var firstNum = document.getElementById('first_num').value;
+            var secondNum = document.getElementById('second_num').value;
+
+            // Results Variable
+            var result = 0;
+
+            // Subtraction Operator Function
+            function subtract(num1, num2) {
+                result = parseFloat(num1) - parseFloat(num2);
+                console.log(result);
+                return result
+            }
+
+            // Execute the Subtraction Function
+            subtract(firstNum, secondNum)
+
+            // Display Result
+            display(result)
+        }
+
+        function multiply() {
+            // Detect Inputs
+            var firstNum = document.getElementById('first_num').value;
+            var secondNum = document.getElementById('second_num').value;
+
+            // Results Variable
+            var result = 0;
+
+            // Multiplication Operator Function
+            function multiply(num1, num2) {
+                result = parseFloat(num1) * parseFloat(num2);
+                console.log(result);
+            }
+
+            // Execute the Multiplication Function
+            multiply(firstNum, secondNum)
+
+            // Display Result
+            display(result)
+        }
+
+        function divide() {
+            // Detect Inputs
+            var firstNum = document.getElementById('first_num').value;
+            var secondNum = document.getElementById('second_num').value;
+
+            // Results Variable
+            var result = 0;
+
+            // Division Operator Function
+            function divide(num1, num2) {
+                result = parseFloat(num1) / parseFloat(num2);
+                console.log(result);
+            }
+
+            // Execute the Division Function
+            divide(firstNum, secondNum)
+
+            // Display Result
+            display(result)
+        }
+
+        // Display Function
+        function display(number) {
+            // Display Result
+            var display = document.getElementById('display_result');
+            display.innerHTML = `${number}`;
+        }
+    </script>
+    <center>
+        <p>Click the button below</p>
+        <button onclick="myFunction()">Click here for multiply</button>
+        <br />
+    </center>
+    <p id="demo"></p>
+</body>
+
+</html>

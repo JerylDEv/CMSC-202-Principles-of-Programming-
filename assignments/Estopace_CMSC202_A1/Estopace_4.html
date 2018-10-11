@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500
+        }
+    </style>
+</head>
+
+<body>
+    <b>
+        <center>Sample Script Example</center>
+    </b>
+    <br />Enter first number:
+    <input type="text" id="txt1" name="text1">Enter second number:
+    <input type="text" id="txt2" name="text2">
+    <p id="demo"></p>
+    <br>
+    <form action="">
+        Please enter your next birthday: <input type="date" id="next_birthday">
+        <p id="next_birthday_message">There are 0 days left until your next birthday.</p>
+    </form>
+    <script>
+        console.log('Connected');
+
+        function myFunction() {
+            var mytextbox1 = document.getElementById("txt1").value;
+            var mytextbox2 = document.getElementById("txt2").value;
+            var result = mytextbox1 * mytextbox2;
+            document.getElementById("demo").innerHTML = result;
+        }
+
+        // Get next birthday date input
+        var nextBirthday = document.getElementById('next_birthday');
+
+        // Create a listener to act accordingly to the 'change' of input
+        nextBirthday.addEventListener("change", function() {
+            // Recognize the date input value
+            var date = this.value;
+            // Determine the time between next birthday since 1/1/1970
+            var nextBirthday = new Date(date);
+            var timeNextBirth = nextBirthday.getTime();
+
+            // Determine the time between today since 1/1/1970
+            var today = new Date();
+            var timeCurrent = today.getTime();
+
+            // Calculate Time in Days
+            function calculateDays(next, current) {
+                // Since getTime() the amount of time since 1/1/1970 in milliseconds 
+                // I need to divide the result by days in milliseconds
+                var sec = 1000 // 1000 milliseconds
+                var min = 60 * sec // 60 seconds
+                var hour = 60 * min // 60 minutes
+                var day = 24 * hour // 24 hours
+
+                // Calculation
+                result = (next - current) / day;
+
+                // Return a rounded and formatted the result.
+                // return Math.round(result).toLocaleString();
+                return result
+            }
+            // The binding the result to daysToGo variable
+            var daysToGo = Math.round(calculateDays(timeNextBirth, timeCurrent))
+            var daysToGo_negative = Math.round(calculateDays(timeNextBirth, timeCurrent) * -1)
+
+            // Format the results
+            var positive = daysToGo.toLocaleString();
+            var negative = daysToGo_negative.toLocaleString()
+
+            // My own exploratory twist
+            if (daysToGo < 0) {
+                // Change the message
+                var display1 = document.getElementById('next_birthday_message');
+                // Display the number of days passed since your last birthday
+                display1.innerHTML = `Your birthday had already occurred ${negative} days ago.`;
+            } else {
+                // Change the message
+                var display2 = document.getElementById('next_birthday_message');
+                // Display the number of days before next birthday
+                display2.innerHTML = `There are ${positive} days left until your next birthday.`;
+            }
+        })
+    </script>
+    <center>
+        <p>Click the button below</p>
+        <button onclick="myFunction()">Click here for multiply</button>
+        <br />
+    </center>
+    <p id="demo"></p>
+</body>
+
+</html>

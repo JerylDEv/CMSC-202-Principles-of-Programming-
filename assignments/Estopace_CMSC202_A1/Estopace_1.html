@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500
+        }
+    </style>
+</head>
+
+<body>
+    <b>
+        <center>Sample Script Example</center>
+    </b>
+    <br />Enter first number:
+    <input type="text" id="txt1" name="text1">Enter second number:
+    <input type="text" id="txt2" name="text2">
+    <p id="demo"></p>
+    <br>
+    <p id="today"></p>
+    <script>
+        console.log('Connected');
+
+        function myFunction() {
+            var mytextbox1 = document.getElementById("txt1").value;
+            var mytextbox2 = document.getElementById("txt2").value;
+            var result = mytextbox1 * mytextbox2;
+            document.getElementById("demo").innerHTML = result;
+        }
+
+        // Execute the anonymous function every 100 milliseconds
+        window.setInterval(function() {
+            // Display clock message by executing the Clock Function
+            var today_display = document.getElementById('today');
+            today_display.innerHTML = clock();
+        }, 100)
+
+        // Clock Function
+        function clock() {
+            // Current Time Function
+            function currentTime() {
+                var d = new Date();
+                // Get Current Time
+                // The getHours() method returns the hour (from 0 to 23) of the specified date and time
+                var hour = d.getHours();
+                var minutes = d.getMinutes();
+                var seconds = d.getSeconds();
+
+                // Hours 12 Hour Format
+                function twelveHourFormat(hour, minutes, seconds) {
+                    var ampm = '';
+                    var min = '';
+                    var sec = '';
+
+                    // Handles how Minutes should be displayed
+                    if (minutes < 10) {
+                        min = `0${minutes}`
+                    } else {
+                        min = minutes
+                    }
+
+                    // Handles how Seconds should be displayed
+                    if (seconds < 10) {
+                        sec = `0${seconds}`
+                    } else {
+                        sec = seconds
+                    }
+
+                    // Handles when AM and PM should be displayed
+                    // 12 - 23 == PM
+                    if (hour >= 12) {
+                        ampm = 'PM';
+                        if (hour > 12) {
+                            hour = hour - 12
+                        }
+
+                        return hour + ' ' + ampm + ' : ' + min + ' : ' + sec;
+                    } else {
+                        ampm = 'AM';
+                        // 0 - 12 == AM
+                        if (hour == 0) {
+                            hour = 12
+                        }
+                        return hour + ' ' + ampm + ' : ' + min + ' : ' + sec;
+                    }
+                }
+
+                return twelveHourFormat(hour, minutes, seconds);
+            }
+
+            // Current Date Function
+            function currentDate() {
+                var d = new Date();
+                // Get Current Year
+                var currentYear = d.getFullYear();
+                // The getMonth() method returns the month (from 0 to 11)
+                var month_count = d.getMonth();
+                // Get Current Date
+                var date_count = d.getDate();
+                // The getDay() method returns the day of the week (from 0 to 6)
+                var day_count = d.getDay();
+
+                // Date Arrays
+                var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+                // Date Suffix for 31 days
+                function dateSuffix(date) {
+                    // Date Suffix Variable
+                    var suffix = '';
+                    // 31 Days Suffix
+                    if (date == 1 || date == 21 || date == 31) {
+                        suffix = 'st';
+                        return date + suffix.sup();
+                    } else if (date == 2 || date == 22) {
+                        suffix = 'nd';
+                        return date + suffix.sup();
+                    } else if (date == 3 || date == 23) {
+                        suffix = 'rd';
+                        return date + suffix.sup();
+                    } else {
+                        suffix = 'th';
+                        return date + suffix.sup();
+                    }
+                }
+
+                return `${days[day_count]}, ${dateSuffix(date_count)} ${months[month_count]} <br> ${currentYear}`;
+            }
+
+            // Clock Message
+            var clockMessage = `Today is: ${currentDate()} Current time is: ${currentTime()}`;
+
+            // Return Clock Message
+            return clockMessage;
+        }
+    </script>
+    <center>
+        <p>Click the button below</p>
+        <button onclick="myFunction()">Click here for multiply</button>
+        <br />
+    </center>
+    <p id="demo"></p>
+</body>
+
+</html>
