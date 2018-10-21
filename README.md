@@ -6,7 +6,9 @@ I created this Repository to keep my notes on Eloquent JavaScript (<http://eloqu
 
 Navigate to 'js' folder to view my scripts and notes for each Chapter in Eloquent JavaScript.
 
-Navigate to 'assignment' folder to view my assignments. Note that I may publish my answers after the Submission date.
+Navigate to 'Assignment' folder to view my assignments. Note that I may publish my answers after the Submission date.
+
+Navigate to 'Exams' folder to view my exams. Note that I may publish my answers after the Submission date.
 
 Here are the steps to preview HTML pages from GitHub:
 
