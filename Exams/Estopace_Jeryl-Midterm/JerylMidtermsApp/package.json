@@ -1,0 +1,38 @@
+{
+  "name": "com.phonegap.helloworld",
+  "version": "1.0.0",
+  "displayName": "helloworld",
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-battery-status": {},
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-vibration": {},
+      "cordova-plugin-request-location-accuracy": {},
+      "cordova.plugins.diagnostic": {},
+      "cordova-plugin-save-image": {},
+      "cordova-plugin-photo-library": {
+        "PHOTO_LIBRARY_USAGE_DESCRIPTION": "To choose photos"
+      },
+      "cordova-plugin-photos": {}
+    }
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "cordova-android": "~7.1.1",
+    "cordova-plugin-battery-status": "^2.0.2",
+    "cordova-plugin-camera": "^4.0.3",
+    "cordova-plugin-compat": "^1.2.0",
+    "cordova-plugin-file": "5.0.0",
+    "cordova-plugin-geolocation": "^4.0.1",
+    "cordova-plugin-photo-library": "2.1.1",
+    "cordova-plugin-photos": "^1.0.8",
+    "cordova-plugin-request-location-accuracy": "^2.2.3",
+    "cordova-plugin-save-image": "^0.3.0",
+    "cordova-plugin-vibration": "^3.1.0",
+    "cordova.plugins.diagnostic": "^4.0.10"
+  }
+}

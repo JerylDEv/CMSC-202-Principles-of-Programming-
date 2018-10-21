@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.jerylmidtermsapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Battery">
+        <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="SaveImage">
+        <param name="android-package" value="com.quiply.cordova.saveimage.SaveImage" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <feature name="PhotoLibrary">
+        <param name="android-package" value="com.terikon.cordova.photolibrary.PhotoLibrary" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvphotolibrary:*" />
+    <feature name="Photos">
+        <param name="android-package" value="com.domax.cordova.Photos" />
+    </feature>
+    <feature name="RequestLocationAccuracy">
+        <param name="android-package" value="cordova.plugin.RequestLocationAccuracy" />
+    </feature>
+    <feature name="Diagnostic">
+        <param name="android-package" value="cordova.plugins.Diagnostic" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Location">
+        <param name="android-package" value="cordova.plugins.Diagnostic_Location" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Bluetooth">
+        <param name="android-package" value="cordova.plugins.Diagnostic_Bluetooth" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Wifi">
+        <param name="android-package" value="cordova.plugins.Diagnostic_Wifi" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Camera">
+        <param name="android-package" value="cordova.plugins.Diagnostic_Camera" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_Notifications">
+        <param name="android-package" value="cordova.plugins.Diagnostic_Notifications" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_NFC">
+        <param name="android-package" value="cordova.plugins.Diagnostic_NFC" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Diagnostic_External_Storage">
+        <param name="android-package" value="cordova.plugins.Diagnostic_External_Storage" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>Jeryl Midterms App</name>
+    <description>
+        An application based on the Midterms requirements for CMSC 202.
+
+        The Midterm requirements are as follows.
+
+        You are required to develop an android mobile application using Phone-Gap or Cordova with the below functionality on click of button
+
+        1) Show Battery Status
+
+        2) Show Geo Location
+
+        3) Vibrate Phone
+
+        4) Click and Save Photo
+    </description>
+    <author email="support@phonegap.com" href="http://phonegap.com">
+        PhoneGap Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <icon qualifier="hdpi" src="../JerylMidtermsApp/www/res/mipmap-hdpi/jeryl_midterms_app_ic_launcher.png" />
+    <icon qualifier="mdpi" src="../JerylMidtermsApp/www/res/mipmap-mdpi/jeryl_midterms_app_ic_launcher.png" />
+    <icon qualifier="xhdpi" src="../JerylMidtermsApp/www/res/mipmap-xhdpi/jeryl_midterms_app_ic_launcher.png" />
+    <icon qualifier="xxhdpi" src="../JerylMidtermsApp/www/res/mipmap-xxhdpi/jeryl_midterms_app_ic_launcher.png" />
+    <icon qualifier="xxxhdpi" src="../JerylMidtermsApp/www/res/mipmap-xxxhdpi/jeryl_midterms_app_ic_launcher.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="phonegap-version" value="cli-8.0.0" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />
+</widget>

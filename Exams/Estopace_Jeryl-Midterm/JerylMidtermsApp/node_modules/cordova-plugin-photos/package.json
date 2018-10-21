@@ -1,0 +1,65 @@
+{
+  "_from": "cordova-plugin-photos",
+  "_id": "cordova-plugin-photos@1.0.8",
+  "_inBundle": false,
+  "_integrity": "sha1-8bnJbkYpqnHitJFMbAbG/cXEUEI=",
+  "_location": "/cordova-plugin-photos",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-photos",
+    "name": "cordova-plugin-photos",
+    "escapedName": "cordova-plugin-photos",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-photos/-/cordova-plugin-photos-1.0.8.tgz",
+  "_shasum": "f1b9c96e4629aa71e2b4914c6c06c6fdc5c45042",
+  "_spec": "cordova-plugin-photos",
+  "_where": "C:\\Users\\accessadmin\\Documents\\UPOU\\CMSC 202\\Exams\\Estopace_Jeryl-Midterm\\JerylMidtermsApp",
+  "autor": "Maksym Dominichenko <max@dominichenko.com>",
+  "bugs": {
+    "url": "https://github.com/domax/cordova-plugin-photos/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-photos",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "This Cordova/Phonegap plugin provides access to photo library on device.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/domax/cordova-plugin-photos#README",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "exif",
+    "photo-library",
+    "photo-album",
+    "photo-collection",
+    "photo-asset",
+    "thumbnail"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-photos",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domax/cordova-plugin-photos.git"
+  },
+  "version": "1.0.8"
+}

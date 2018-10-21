@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.jerylmidtermsapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Jeryl Midterms App</name>
+    <description>
+        An application based on the Midterms requirements for CMSC 202.
+
+        The Midterm requirements are as follows.
+
+        You are required to develop an android mobile application using Phone-Gap or Cordova with the below functionality on click of button
+
+        1) Show Battery Status
+
+        2) Show Geo Location
+
+        3) Vibrate Phone
+
+        4) Click and Save Photo
+    </description>
+    <author email="support@phonegap.com" href="http://phonegap.com">
+        PhoneGap Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="phonegap-version" value="cli-8.0.0" />
+
+    <plugin name="cordova-plugin-battery-status" spec="^2.0.2" />
+    <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
+    <plugin name="cordova-plugin-camera" spec="^4.0.3" />
+    <plugin name="cordova-plugin-vibration" spec="^3.1.0" />
+    <plugin name="cordova-plugin-request-location-accuracy" spec="^2.2.3" />
+    <plugin name="cordova.plugins.diagnostic" spec="^4.0.10" />
+    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />
+    <platform name="android">
+        <icon qualifier="hdpi" src="www/res/mipmap-hdpi/jeryl_midterms_app_ic_launcher.png" />
+        <icon qualifier="mdpi" src="www/res/mipmap-mdpi/jeryl_midterms_app_ic_launcher.png" />
+        <icon qualifier="xhdpi" src="www/res/mipmap-xhdpi/jeryl_midterms_app_ic_launcher.png" />
+        <icon qualifier="xxhdpi" src="www/res/mipmap-xxhdpi/jeryl_midterms_app_ic_launcher.png" />
+        <icon qualifier="xxxhdpi" src="www/res/mipmap-xxxhdpi/jeryl_midterms_app_ic_launcher.png" />
+    </platform>
+    <plugin name="cordova-plugin-save-image" spec="^0.3.0" />
+    <engine name="android" spec="~7.1.1" />
+</widget>
