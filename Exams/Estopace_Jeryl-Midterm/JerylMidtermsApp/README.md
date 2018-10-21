@@ -1,14 +1,10 @@
-# A Blank PhoneGap App
+\#Jeryl Midterms App
 
-## Usage
+An application based on the Midterms requirements for CMSC 202. 
 
-### PhoneGap CLI
+The Midterm requirements are as follows. You are required to develop an android mobile application using Phone-Gap or Cordova with the below functionality on click of button 
 
-    $ phonegap create my-app --template blank
-
-### Desktop
-
-In your browser, open the file:
-
-    /www/index.html
-
+1\.  Show Battery Status 
+2\.  Show Geo Location 
+3\.  Vibrate Phone 
+4\.  Click and Save Photo
