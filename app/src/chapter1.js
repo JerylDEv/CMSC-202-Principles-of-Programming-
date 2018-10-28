@@ -1,29 +1,29 @@
 console.log('Connected');
 
-var inf = Infinity - Infinity;
+let inf = Infinity - Infinity;
 inf;
 inf = 1 - Infinity;
 inf;
 inf = Infinity - 1;
 inf;
-var nan = 0 / 0;
+const nan = 0 / 0;
 nan;
 
 // Unary Operators
 // typeof
-var num = typeof 7.5;
+const num = typeof 7.5;
 num;
-var str = typeof 'hello';
+const str = typeof 'hello';
 str;
-var bool = typeof true;
+let bool = typeof true;
 bool;
 // minus operator can be used a binary or a unary operator
-var minus = -(10 - 5);
+const minus = -(10 - 5);
 minus;
 
 // Strings
-var x = document.getElementById('backtick');
-var msg = `I use a ` + `backtick! \n Hello \t World!`; // concatenation works for strings
+const x = document.getElementById('backtick');
+const msg = 'I use a ' + 'backtick! \n Hello \t World!'; // concatenation works for strings
 console.log(msg); // console.log recognizes escapes: \n and \t
 x.textContent = msg; // .textContent does not recognize the \n and \t
 
@@ -81,10 +81,10 @@ bool = undefined == undefined;
 bool;
 bool = undefined == null;
 bool;
-bool = null == undefined;
+bool = undefined == null;
 bool;
 // Automatic Type Conversion
-var sample = 8 * null;
+let sample = 8 * null;
 sample;
 sample = typeof sample;
 sample;
@@ -92,7 +92,7 @@ sample = '7' - 2;
 sample;
 sample = typeof sample;
 sample;
-sample = '15' + 2;
+sample = `15${2}`;
 sample;
 sample = typeof sample;
 sample;

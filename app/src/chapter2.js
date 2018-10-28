@@ -20,7 +20,7 @@ console.log(yourName);
 let number = 0;
 
 while (number < 5) {
-    console.log('The current number is ' + number);
+    console.log(`The current number is ${number}`);
     number += 2;
 }
 
@@ -30,7 +30,7 @@ for (let a = 0; a < 10; a += 3) {
 }
 
 // Breaking Out of a Loop
-for (let b = 3;; b = b + 1) {
+for (let b = 3; ; b += 1) {
     if (b % 2 == 0) {
         console.log(b);
         break;
@@ -63,7 +63,7 @@ switch (prompt('What is the weather today?')) {
 
 // Looping a Triangle
 for (let a = 0, b = ''; a < 7; a++) {
-    b = b + '#';
+    b = `${b}#`;
     console.log(b);
 }
 
@@ -129,7 +129,7 @@ for (let square = 1; square <= 8; square++) {
 
 // Chess Board Version 2
 for (let squareHeight = 1; squareHeight <= 8; squareHeight++) {
-    let evenSquareHeight = squareHeight % 2 == 0;
+    const evenSquareHeight = squareHeight % 2 == 0;
     console.log(evenSquareHeight ? '# # # # ' : ' # # # #');
 }
 
@@ -137,9 +137,9 @@ let b = '';
 
 for (let z = 1; z <= 2; z++) {
     if (z % 2 == 0) {
-        b = b + ' ';
+        b = `${b} `;
     } else {
-        b = b + '#';
+        b = `${b}#`;
     }
 }
 
@@ -148,9 +148,11 @@ console.log(b);
 // Chess Board Version 3
 // Using the Nested For Loop Concept
 
-let colSize = 8,
-    rowSize = 8,
-    board = '';
+const colSize = 8;
+
+const rowSize = 8;
+
+let board = '';
 
 // The Outer For Loop
 // This is for the Column. The even number result will
@@ -162,12 +164,12 @@ for (let y = 1; y <= colSize; y++) {
     // This shows the desired result within a Row.
     for (let x = 1; x <= rowSize; x++) {
         if ((x + y) % 2 == 0) {
-            board = board + ' ';
+            board = `${board} `;
         } else {
-            board = board + '#';
+            board = `${board}#`;
         }
     }
     // This separates the odd and even Column > Rows in new line.
-    board = board + '\n';
+    board = `${board}\n`;
 }
 console.log(board);
