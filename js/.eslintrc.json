@@ -1,0 +1,12 @@
+{
+    "extends": "google",
+    "plugins": [
+        "import"
+    ],
+    "rules": {
+        "no-console":"off",
+        "import/newline-after-import":"off",
+        "no-unused-vars":"off",
+        "max-len":"off"
+    }
+}
