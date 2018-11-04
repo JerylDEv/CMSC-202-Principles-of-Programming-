@@ -20,21 +20,21 @@ console.log(yourName);
 let number = 0;
 
 while (number < 5) {
-    console.log(`The current number is ${number}`);
-    number += 2;
+	console.log(`The current number is ${number}`);
+	number += 2;
 }
 
 // For Loops
 for (let a = 0; a < 10; a += 3) {
-    console.log(`The number is ${a}`);
+	console.log(`The number is ${a}`);
 }
 
 // Breaking Out of a Loop
 for (let b = 3; ; b += 1) {
-    if (b % 2 == 0) {
-        console.log(b);
-        break;
-    }
+	if (b % 2 == 0) {
+		console.log(b);
+		break;
+	}
 }
 
 // Updating Bindings Succicntly
@@ -63,15 +63,15 @@ switch (prompt('What is the weather today?')) {
 
 // Looping a Triangle
 for (let a = 0, b = ''; a < 7; a++) {
-    b = `${b}#`;
-    console.log(b);
+	b = `${b}#`;
+	console.log(b);
 }
 
 // Looping a Triangle based on .length
 // Run the block while hash length is less than or equal to 7
 for (let hash = '#'; hash.length <= 7; hash += '#') {
-    // Display current hash count;
-    console.log(hash);
+	// Display current hash count;
+	console.log(hash);
 }
 
 // FizzBuzz
@@ -107,40 +107,40 @@ for (let count = 1; count <= 100; count++) {
 // Alternate code for FizzBuzz
 
 for (let n = 0; n < 100; n++) {
-    let output = '';
-    if (n % 3 == 0) {
-        output += 'Fizz';
-    }
-    if (n % 5 == 0) {
-        output += 'Buzz';
-    }
-    console.log(output || n);
+	let output = '';
+	if (n % 3 == 0) {
+		output += 'Fizz';
+	}
+	if (n % 5 == 0) {
+		output += 'Buzz';
+	}
+	console.log(output || n);
 }
 
 // Chess Board Version 1
 
 for (let square = 1; square <= 8; square++) {
-    if (square % 2 == 0) {
-        console.log('# # # # ');
-    } else {
-        console.log(' # # # #');
-    }
+	if (square % 2 == 0) {
+		console.log('# # # # ');
+	} else {
+		console.log(' # # # #');
+	}
 }
 
 // Chess Board Version 2
 for (let squareHeight = 1; squareHeight <= 8; squareHeight++) {
-    const evenSquareHeight = squareHeight % 2 == 0;
-    console.log(evenSquareHeight ? '# # # # ' : ' # # # #');
+	const evenSquareHeight = squareHeight % 2 == 0;
+	console.log(evenSquareHeight ? '# # # # ' : ' # # # #');
 }
 
 let b = '';
 
 for (let z = 1; z <= 2; z++) {
-    if (z % 2 == 0) {
-        b = `${b} `;
-    } else {
-        b = `${b}#`;
-    }
+	if (z % 2 == 0) {
+		b = `${b} `;
+	} else {
+		b = `${b}#`;
+	}
 }
 
 console.log(b);
@@ -160,16 +160,16 @@ let board = '';
 // The Odd number result seem to show the reverse of the
 // Inner For Loop Statement.
 for (let y = 1; y <= colSize; y++) {
-    // The Inner For Loop
-    // This shows the desired result within a Row.
-    for (let x = 1; x <= rowSize; x++) {
-        if ((x + y) % 2 == 0) {
-            board = `${board} `;
-        } else {
-            board = `${board}#`;
-        }
-    }
-    // This separates the odd and even Column > Rows in new line.
-    board = `${board}\n`;
+	// The Inner For Loop
+	// This shows the desired result within a Row.
+	for (let x = 1; x <= rowSize; x++) {
+		if ((x + y) % 2 == 0) {
+			board = `${board} `;
+		} else {
+			board = `${board}#`;
+		}
+	}
+	// This separates the odd and even Column > Rows in new line.
+	board = `${board}\n`;
 }
 console.log(board);
