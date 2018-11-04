@@ -5,8 +5,8 @@ const addition = (num1, num2) => {
 };
 
 // Named Function shortcut key = nfn tab.
-const square = (x) => {
-	return x * x;
+const square = (q) => {
+	return q * q;
 };
 
 // console.log shortcut key = clg tab.
@@ -82,11 +82,11 @@ const greetings = () => {
 // Declaration Notation Form
 /**
  * Generates a square of x
- * @param {x} x The number.
- * @return {x}
+ * @param {a} a The number.
+ * @return {a}
  */
-function twice(x) {
-	return x * x;
+function twice(a) {
+	return a * a;
 }
 
 // Arrow Function Form
@@ -136,4 +136,70 @@ function fourthThing() {
 	thirdThing();
 }
 
-fourthThing(); // This will result to an error: Maximum call stack size exceeded.
+// fourthThing(); // This will result to an error: Maximum call stack size exceeded.
+
+// Optional Arguments
+console.log(twice(4, true, 'hello')); // 16
+
+// The upside is that this behavior can be used to allow a function to be called with different numbers of arguments.
+/**
+ * minus
+ * @param {a} a first number
+ * @param {b} b second number
+ * @return {difference}
+ */
+function minus(a, b) {
+	if (b === undefined) {
+		return -a;
+	} else {
+		return a - b;
+	}
+}
+
+// If you write an = operator after a parameter, followed by an expression, the value of that expression will replace the argument when it is not given.
+
+/**
+ * power function
+ * @param {number} base
+ * @param {number} [exponent=2] 2 is the default value for the exponent
+ * @return {number} result
+ */
+function power(base, exponent = 2) {
+	let result = 1;
+	for (let count = 0; count < exponent; count++) {
+		result *= base;
+	}
+	return result;
+}
+
+// Closure
+// The feature to be able to reference a specific instance of a local binding in an enclosing scope is called closure.
+
+/**
+ * wrapValue function
+ * @param {number} n
+ * @return {number} local number
+ */
+function wrapValue(n) {
+	const local = n;
+	return () => local;
+}
+
+const wrap1 = wrapValue(1);
+const wrap2 = wrapValue(2);
+
+console.log(wrap1());
+console.log(wrap2());
+
+/**
+ * multiplier function
+ * @param {number} factor
+ * @return {number} product
+ */
+function multiplier(factor) {
+	return (number) => number * factor;
+}
+
+const multiplication = multiplier(3);
+
+console.log(multiplication(5));
