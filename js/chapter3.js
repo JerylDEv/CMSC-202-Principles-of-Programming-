@@ -202,4 +202,29 @@ function multiplier(factor) {
 
 const multiplication = multiplier(3);
 
-console.log(multiplication(5));
+console.log(multiplication(5)); // Returns 15
+
+// In the example, multiplier is called and creates an environment in which its factor parameter is bound to 3.
+// The function value it returns, which is stored in multiplication, remembers this environment.
+// So when that is called, it multiplies its argument by 3.
+
+// Recursion
+// A function that calls itself is called recursive.
+
+/**
+ * raise function
+ * This is an alternative form of the power function
+ * @param {number} base
+ * @param {number} exponent
+ * @return {number}
+ */
+function raise(base, exponent) {
+	if (exponent == 0) {
+		return 1;
+	} else {
+		return base * raise(base, exponent - 1);
+	}
+}
+
+const raiseNumber = raise(2, 10);
+console.log(raiseNumber);
