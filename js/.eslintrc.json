@@ -1,18 +1,25 @@
 {
-    "extends": "google",
-    "env": {
-        "node": true,
-        "es6": true
-    },
-    "rules": {
-        "no-console":"off",
-        "import/newline-after-import":"off",
-        "no-unused-vars":"off",
-        "max-len":"off",
-        "indent": ["error","tab"],
-        "linebreak-style": ["error","windows"],
-        "quotes": ["error","single"],
-        "semi": ["error","always"],
-        "no-tabs":0
-    }
+	"extends": "google",
+	"env": {
+		"node": true,
+		"es7": true
+	},
+	"parser": "babel-eslint",
+	"rules": {
+		"no-console": "off",
+		"import/newline-after-import": "off",
+		"no-unused-vars": "off",
+		"max-len": "off",
+		"indent": [ "error", "tab" ],
+		"linebreak-style": [ "error", "windows" ],
+		"quotes": [
+			"error",
+			"single",
+			{
+				"allowTemplateLiterals": true
+			}
+		],
+		"semi": [ "error", "always" ],
+		"no-tabs": 0
+	}
 }

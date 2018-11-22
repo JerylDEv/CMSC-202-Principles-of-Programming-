@@ -34,5 +34,6 @@
     "cordova-plugin-save-image": "^0.3.0",
     "cordova-plugin-vibration": "^3.1.0",
     "cordova.plugins.diagnostic": "^4.0.10"
-  }
+  },
+  "devDependencies": {}
 }
