@@ -2,7 +2,7 @@
 	"extends": "google",
 	"env": {
 		"node": true,
-		"es7": true
+		"es6": true
 	},
 	"parser": "babel-eslint",
 	"rules": {
@@ -17,6 +17,9 @@
 			"single",
 			{
 				"allowTemplateLiterals": true
+			},
+			{
+				"avoidEscape": true
 			}
 		],
 		"semi": [ "error", "always" ],
