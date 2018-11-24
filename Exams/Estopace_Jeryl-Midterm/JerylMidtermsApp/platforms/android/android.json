@@ -43,6 +43,14 @@
             {
               "xml": "<feature name=\"Photos\"><param name=\"android-package\" value=\"com.domax.cordova.Photos\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"OneSignalPush\"><param name=\"android-package\" value=\"com.plugin.gcm.OneSignalPush\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Sms\"><param name=\"android-package\" value=\"com.cordova.plugins.sms.Sms\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -88,6 +96,44 @@
           "/manifest": [
             {
               "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"com.amazon.device.messaging.permission.RECEIVE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<permission android:name=\"com.phonegap.jerylmidtermsapp.permission.RECEIVE_ADM_MESSAGE\" android:protectionLevel=\"signature\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"com.phonegap.jerylmidtermsapp.permission.RECEIVE_ADM_MESSAGE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.SEND_SMS\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.telephony\" android:required=\"false\" />",
+              "count": 1
+            }
+          ],
+          "/manifest/application": [
+            {
+              "xml": "<amazon:enable-feature android:name=\"com.amazon.device.messaging\" android:required=\"false\" xmlns:amazon=\"http://schemas.amazon.com/apk/res/android\" />",
+              "count": 1
+            },
+            {
+              "xml": "<service android:exported=\"false\" android:name=\"com.onesignal.ADMMessageHandler\" />",
+              "count": 1
+            },
+            {
+              "xml": "<receiver android:name=\"com.onesignal.ADMMessageHandler$Receiver\" android:permission=\"com.amazon.device.messaging.permission.SEND\"><intent-filter><action android:name=\"com.amazon.device.messaging.intent.REGISTRATION\" /><action android:name=\"com.amazon.device.messaging.intent.RECEIVE\" /><category android:name=\"com.phonegap.jerylmidtermsapp\" /></intent-filter></receiver>",
               "count": 1
             }
           ]
@@ -166,6 +212,12 @@
       "PACKAGE_NAME": "com.phonegap.jerylmidtermsapp"
     },
     "cordova-plugin-photos": {
+      "PACKAGE_NAME": "com.phonegap.jerylmidtermsapp"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "com.phonegap.jerylmidtermsapp"
+    },
+    "cordova-sms-plugin": {
       "PACKAGE_NAME": "com.phonegap.jerylmidtermsapp"
     }
   },
@@ -527,6 +579,22 @@
       "clobbers": [
         "Photos"
       ]
+    },
+    {
+      "id": "onesignal-cordova-plugin.OneSignal",
+      "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
+      "pluginId": "onesignal-cordova-plugin",
+      "clobbers": [
+        "OneSignal"
+      ]
+    },
+    {
+      "id": "cordova-sms-plugin.Sms",
+      "file": "plugins/cordova-sms-plugin/www/sms.js",
+      "pluginId": "cordova-sms-plugin",
+      "clobbers": [
+        "window.sms"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -539,6 +607,8 @@
     "cordova-plugin-save-image": "0.3.0",
     "cordova-plugin-file": "5.0.0",
     "cordova-plugin-photo-library": "2.1.1",
-    "cordova-plugin-photos": "1.0.8"
+    "cordova-plugin-photos": "1.0.8",
+    "onesignal-cordova-plugin": "2.4.5",
+    "cordova-sms-plugin": "0.1.13"
   }
 }

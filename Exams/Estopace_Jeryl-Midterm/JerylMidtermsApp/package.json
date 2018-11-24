@@ -17,7 +17,9 @@
       "cordova-plugin-photo-library": {
         "PHOTO_LIBRARY_USAGE_DESCRIPTION": "To choose photos"
       },
-      "cordova-plugin-photos": {}
+      "cordova-plugin-photos": {},
+      "onesignal-cordova-plugin": {},
+      "cordova-sms-plugin": {}
     }
   },
   "dependencies": {
@@ -33,7 +35,9 @@
     "cordova-plugin-request-location-accuracy": "^2.2.3",
     "cordova-plugin-save-image": "^0.3.0",
     "cordova-plugin-vibration": "^3.1.0",
-    "cordova.plugins.diagnostic": "^4.0.10"
+    "cordova-sms-plugin": "^0.1.13",
+    "cordova.plugins.diagnostic": "^4.0.10",
+    "onesignal-cordova-plugin": "^2.4.5"
   },
   "devDependencies": {}
 }

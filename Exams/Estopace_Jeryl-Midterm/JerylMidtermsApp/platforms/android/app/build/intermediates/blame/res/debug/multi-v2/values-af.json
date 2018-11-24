@@ -60,6 +60,23 @@
             "outputFile": "C:\\Users\\accessadmin\\Documents\\UPOU\\CMSC 202\\Notes on Eloquent JavaScript\\Exams\\Estopace_Jeryl-Midterm\\JerylMidtermsApp\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-af\\values-af.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\accessadmin\\.gradle\\caches\\transforms-1\\files-1.1\\firebase-messaging-15.0.2.aar\\d432d64356303e2d08d8e635644ef17d\\res\\values-af\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "205",
+                        "endColumns": "101",
+                        "endOffsets": "306"
+                    },
+                    "to": {
+                        "startLines": "39",
+                        "startColumns": "4",
+                        "startOffsets": "4705",
+                        "endColumns": "105",
+                        "endOffsets": "4806"
+                    }
+                },
+                {
                     "source": "C:\\Users\\accessadmin\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\0888c64512a369eb13c944634eeb5bee\\res\\values-af\\values.xml",
                     "from": {
                         "startLines": "4",
@@ -103,11 +120,11 @@
                         "endOffsets": "154,262,385,485,591,676,779,897,973,1050,1131,1238,1341,1438,1546,1648,1750,1867,1965,2045,2146"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,39,40",
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,40,41",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,209,317,440,540,646,731,834,952,1028,1105,1186,1293,1396,1493,1601,1703,1805,1922,4705,4785",
+                        "startOffsets": "105,209,317,440,540,646,731,834,952,1028,1105,1186,1293,1396,1493,1601,1703,1805,1922,4811,4891",
                         "endColumns": "103,107,122,99,105,84,102,117,75,76,80,106,102,96,107,101,101,116,97,79,100",
-                        "endOffsets": "204,312,435,535,641,726,829,947,1023,1100,1181,1288,1391,1488,1596,1698,1800,1917,2015,4780,4881"
+                        "endOffsets": "204,312,435,535,641,726,829,947,1023,1100,1181,1288,1391,1488,1596,1698,1800,1917,2015,4886,4987"
                     }
                 }
             ]

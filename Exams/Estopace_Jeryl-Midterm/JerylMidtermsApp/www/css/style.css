@@ -1,12 +1,12 @@
 .center-block {
-    margin: 0 auto;
-    width: 100%;
+	margin: 0 auto;
+	width: 100%;
 }
 
 .img-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /* height: 300px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	/* height: 300px;
     width: 300px; */
 }

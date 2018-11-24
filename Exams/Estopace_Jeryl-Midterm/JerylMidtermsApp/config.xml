@@ -15,6 +15,8 @@
         3) Vibrate Phone
 
         4) Click and Save Photo
+
+        5) Send SMS
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
@@ -31,16 +33,18 @@
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />
     <platform name="android">
-        <icon qualifier="hdpi" src="../JerylMidtermsApp/www/res/mipmap-hdpi/jeryl_midterms_app_ic_launcher.png" />
-        <icon qualifier="mdpi" src="../JerylMidtermsApp/www/res/mipmap-mdpi/jeryl_midterms_app_ic_launcher.png" />
-        <icon qualifier="xhdpi" src="../JerylMidtermsApp/www/res/mipmap-xhdpi/jeryl_midterms_app_ic_launcher.png" />
-        <icon qualifier="xxhdpi" src="../JerylMidtermsApp/www/res/mipmap-xxhdpi/jeryl_midterms_app_ic_launcher.png" />
-        <icon qualifier="xxxhdpi" src="../JerylMidtermsApp/www/res/mipmap-xxxhdpi/jeryl_midterms_app_ic_launcher.png" />
+        <icon qualifier="hdpi" src="../JerylMidtermsApp/www/res/drawable-hdpi/jeryl_midterms_app_ic_launcher.png" />
+        <icon qualifier="mdpi" src="../JerylMidtermsApp/www/res/drawable-mdpi/jeryl_midterms_app_ic_launcher.png" />
+        <icon qualifier="xhdpi" src="../JerylMidtermsApp/www/res/drawable-xhdpi/jeryl_midterms_app_ic_launcher.png" />
+        <icon qualifier="xxhdpi" src="../JerylMidtermsApp/www/res/drawable-xxhdpi/jeryl_midterms_app_ic_launcher.png" />
+        <icon qualifier="xxxhdpi" src="../JerylMidtermsApp/www/res/drawable-xxxhdpi/jeryl_midterms_app_ic_launcher.png" />
     </platform>
     <plugin name="cordova-plugin-save-image" spec="^0.3.0" />
     <plugin name="cordova-plugin-photo-library" spec="2.1.1">
         <variable name="PHOTO_LIBRARY_USAGE_DESCRIPTION" value="To choose photos" />
     </plugin>
     <plugin name="cordova-plugin-photos" spec="^1.0.8" />
+    <plugin name="onesignal-cordova-plugin" spec="^2.4.5" />
+    <plugin name="cordova-sms-plugin" spec="^0.1.13" />
     <engine name="android" spec="~7.1.1" />
 </widget>

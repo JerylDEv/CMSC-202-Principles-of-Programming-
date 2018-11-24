@@ -91,6 +91,7 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "../onesignal-cordova-plugin/jerylmidtermsapp-build-extras-onesignal.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -263,6 +264,7 @@ dependencies {
     compile "com.google.android.gms:play-services-location:15.+"
     compile "com.android.support:support-v4:26.+"
     compile "com.android.support:appcompat-v7:26.+"
+    compile "com.onesignal:OneSignal:3.10.3"
     // SUB-PROJECT DEPENDENCIES END
 }
 

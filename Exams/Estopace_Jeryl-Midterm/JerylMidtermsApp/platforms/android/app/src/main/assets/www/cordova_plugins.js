@@ -356,6 +356,22 @@ module.exports = [
     "clobbers": [
       "Photos"
     ]
+  },
+  {
+    "id": "onesignal-cordova-plugin.OneSignal",
+    "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
+    "pluginId": "onesignal-cordova-plugin",
+    "clobbers": [
+      "OneSignal"
+    ]
+  },
+  {
+    "id": "cordova-sms-plugin.Sms",
+    "file": "plugins/cordova-sms-plugin/www/sms.js",
+    "pluginId": "cordova-sms-plugin",
+    "clobbers": [
+      "window.sms"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -370,7 +386,9 @@ module.exports.metadata =
   "cordova-plugin-save-image": "0.3.0",
   "cordova-plugin-file": "5.0.0",
   "cordova-plugin-photo-library": "2.1.1",
-  "cordova-plugin-photos": "1.0.8"
+  "cordova-plugin-photos": "1.0.8",
+  "onesignal-cordova-plugin": "2.4.5",
+  "cordova-sms-plugin": "0.1.13"
 };
 // BOTTOM OF METADATA
 });

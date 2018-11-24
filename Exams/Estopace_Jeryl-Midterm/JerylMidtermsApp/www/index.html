@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1,
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1,
             user-scalable=no, width=device-width">
-    <!-- My Custom CSS file -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Onsen UI -->
-    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
-    <link rel="stylesheet" href="lib/onsenui/css/dark-onsen-css-components.min.css">
+        <!-- My Custom CSS file -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Onsen UI -->
+        <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.min.css">
+        <link rel="stylesheet" href="lib/onsenui/css/onsenui-fonts.css">
 
-    <title>Jeryl Midterms App</title>
+        <title>Jeryl Midterms App</title>
 
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8">
         // Waiting for the Device API Libraries to Load
         function onLoad() {
             document.addEventListener('deviceready', onDeviceReady, false);
@@ -39,80 +40,107 @@
 
             // document.getElementById('view-photo-album-button').addEventListener('click', getPhoto(navigator.camera.PictureSourceType.SAVEDPHOTOALBUM));;
 
+            document.addEventListener('deviceready', function () {
+                // Enable to debug issues.
+                // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+
+                var notificationOpenedCallback = function (jsonData) {
+                    console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+                };
+
+                window.plugins.OneSignal
+                    .startInit("1fd5a558-0da0-4179-ae5b-598743775270")
+                    .handleNotificationOpened(notificationOpenedCallback)
+                    .endInit();
+            }, false);
+
         }
     </script>
-    <!-- My Custom JS file -->
-    <script type="text/javascript" src="js/battery.js"></script>
-    <script type="text/javascript" src="js/geolocation.js"></script>
-    <script type="text/javascript" src="js/vibration.js"></script>
-    <script type="text/javascript" src="js/camera.js"></script>
-    <!-- Onsen UI -->
-    <script type="text/javascript" src="lib/onsenui/js/onsenui.min.js"></script>
-</head>
+        <!-- My Custom JS file -->
+        <script type="text/javascript" src="js/battery.js"></script>
+        <script type="text/javascript" src="js/geolocation.js"></script>
+        <script type="text/javascript" src="js/vibration.js"></script>
+        <script type="text/javascript" src="js/camera.js"></script>
+        <!-- Onsen UI -->
+        <script type="text/javascript" src="lib/onsenui/js/onsenui.min.js"></script>
+    </head>
 
-<body onload="onLoad()">
+    <body onload="onLoad()">
 
-    <ons-page>
-        <ons-toolbar>
-            <div class="center">Jeryl Midterms App</div>
-        </ons-toolbar>
-        <ons-list>
-            <ons-list-header>Tap list items to expand</ons-list-header>
+        <ons-page>
+            <ons-toolbar>
+                <div class="center">Jeryl Midterms App</div>
+            </ons-toolbar>
+            <ons-list>
+                <ons-list-header>Tap list items to expand</ons-list-header>
 
-            <!-- Show Battery Status -->
-            <ons-list-item expandable>
-                1) Show Battery Status
-                <div class="expandable-content">
-                    <p>Note: This will show your phone's current battery level, and will also indicate if it is charging or not.
-                    </p>
-                    <br>
-                    <ons-button class="center-block" id="battery-status-button">Click to display</ons-button>
-                </div>
-            </ons-list-item>
-
-            <!-- Show Geo Location -->
-            <ons-list-item expandable>
-                2) Show Geolocation
-                <div class="expandable-content">
-                    <p>Note: This will work if your mobile data is turned on or you are connected to a Wifi, and your Location mode is properly set.</p>
-                    <br>
-                    <ons-button class="center-block" id="geolocation-button">Click to display</ons-button>
-                </div>
-            </ons-list-item>
-
-            <!-- Vibrate Phone -->
-            <ons-list-item expandable>
-                3) Vibrate Phone
-                <div class="expandable-content">
-                    <p>Note: This will work if Sound mode is either set to "Vibrate" or "Sound".</p>
-                    <br>
-                    <ons-button class="center-block" id="vibration-button">Click to vibrate for 3 seconds</ons-button>
-                </div>
-            </ons-list-item>
-
-            <!-- Click and Save Photo -->
-            <ons-list-item expandable>
-                4) Capture and Save a Photo
-                <div class="expandable-content">
-                    <ons-card>
-                        <p><img class="img-center" id="picture-display"></p>
-                        <p>
-                            <ons-button class="center-block" id="take-photo-button">Click to capture and save a photo
-                            </ons-button>
+                <!-- Show Battery Status -->
+                <ons-list-item expandable>
+                    1) Show Battery Status
+                    <div class="expandable-content">
+                        <p>Note: This will show your phone's current battery
+                            level, and will also indicate if it is charging or
+                            not.
                         </p>
-                        <p>
-                            <ons-button class="center-block" id="view-photo-album-button" onclick="getPhoto(navigator.camera.PictureSourceType.SAVEDPHOTOALBUM)">Click to view photo album
-                            </ons-button>
-                        </p>
-                    </ons-card>
-                </div>
-            </ons-list-item>
-        </ons-list>
+                        <br>
+                        <ons-button class="center-block"
+                            id="battery-status-button">Click to display</ons-button>
+                    </div>
+                </ons-list-item>
 
-    </ons-page>
+                <!-- Show Geo Location -->
+                <ons-list-item expandable>
+                    2) Show Geolocation
+                    <div class="expandable-content">
+                        <p>Note: This will work if your mobile data is turned on
+                            or you are connected to a Wifi, and your Location
+                            mode is properly set.</p>
+                        <br>
+                        <ons-button class="center-block"
+                            id="geolocation-button">Click to display</ons-button>
+                    </div>
+                </ons-list-item>
 
-    <!-- Battery Status Dialog -->
-    <template id="battery-dialog-template.html">
+                <!-- Vibrate Phone -->
+                <ons-list-item expandable>
+                    3) Vibrate Phone
+                    <div class="expandable-content">
+                        <p>Note: This will work if Sound mode is either set to
+                            "Vibrate" or "Sound".</p>
+                        <br>
+                        <ons-button class="center-block" id="vibration-button">Click
+                            to vibrate for 3 seconds</ons-button>
+                    </div>
+                </ons-list-item>
+
+                <!-- Click and Save Photo -->
+                <ons-list-item expandable>
+                    4) Capture and Save a Photo
+                    <div class="expandable-content">
+                        <ons-card>
+                            <p><img class="img-center" id="picture-display"></p>
+                            <p>
+                                <ons-button class="center-block"
+                                    id="take-photo-button">Click to capture and
+                                    save a photo
+                                </ons-button>
+                            </p>
+                            <p>
+                                <ons-button class="center-block"
+                                    id="view-photo-album-button"
+                                    onclick="getPhoto(navigator.camera.PictureSourceType.SAVEDPHOTOALBUM)">Click
+                                    to view photo album
+                                </ons-button>
+                            </p>
+                        </ons-card>
+                    </div>
+                </ons-list-item>
+            </ons-list>
+
+        </ons-page>
+
+        <!-- Battery Status Dialog -->
+        <template id="battery-dialog-template.html">
             <ons-dialog id="battery-dialog-id">
                 <div style="text-align: center; padding: 10px;">
                     <p id="battery-dialog-display"></p>
@@ -123,8 +151,8 @@
             </ons-dialog>
         </template>
 
-    <!-- Geolocation Dialog -->
-    <template id="geolocation-dialog-template.html">
+        <!-- Geolocation Dialog -->
+        <template id="geolocation-dialog-template.html">
             <ons-dialog id="geolocation-dialog-id">
                 <div style="text-align: center; padding: 10px;">
                     <p id="geolocation-dialog-display"></p>
@@ -137,6 +165,6 @@
         </template>
 
 
-</body>
+    </body>
 
 </html>

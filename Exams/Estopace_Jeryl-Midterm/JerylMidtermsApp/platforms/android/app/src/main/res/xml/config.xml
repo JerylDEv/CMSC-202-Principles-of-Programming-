@@ -25,6 +25,12 @@
     <feature name="Photos">
         <param name="android-package" value="com.domax.cordova.Photos" />
     </feature>
+    <feature name="OneSignalPush">
+        <param name="android-package" value="com.plugin.gcm.OneSignalPush" />
+    </feature>
+    <feature name="Sms">
+        <param name="android-package" value="com.cordova.plugins.sms.Sms" />
+    </feature>
     <feature name="RequestLocationAccuracy">
         <param name="android-package" value="cordova.plugin.RequestLocationAccuracy" />
     </feature>
@@ -75,17 +81,19 @@
         3) Vibrate Phone
 
         4) Click and Save Photo
+
+        5) Send SMS
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <icon qualifier="hdpi" src="../JerylMidtermsApp/www/res/mipmap-hdpi/jeryl_midterms_app_ic_launcher.png" />
-    <icon qualifier="mdpi" src="../JerylMidtermsApp/www/res/mipmap-mdpi/jeryl_midterms_app_ic_launcher.png" />
-    <icon qualifier="xhdpi" src="../JerylMidtermsApp/www/res/mipmap-xhdpi/jeryl_midterms_app_ic_launcher.png" />
-    <icon qualifier="xxhdpi" src="../JerylMidtermsApp/www/res/mipmap-xxhdpi/jeryl_midterms_app_ic_launcher.png" />
-    <icon qualifier="xxxhdpi" src="../JerylMidtermsApp/www/res/mipmap-xxxhdpi/jeryl_midterms_app_ic_launcher.png" />
+    <icon qualifier="hdpi" src="../JerylMidtermsApp/www/res/drawable-hdpi/jeryl_midterms_app_ic_launcher.png" />
+    <icon qualifier="mdpi" src="../JerylMidtermsApp/www/res/drawable-mdpi/jeryl_midterms_app_ic_launcher.png" />
+    <icon qualifier="xhdpi" src="../JerylMidtermsApp/www/res/drawable-xhdpi/jeryl_midterms_app_ic_launcher.png" />
+    <icon qualifier="xxhdpi" src="../JerylMidtermsApp/www/res/drawable-xxhdpi/jeryl_midterms_app_ic_launcher.png" />
+    <icon qualifier="xxxhdpi" src="../JerylMidtermsApp/www/res/drawable-xxxhdpi/jeryl_midterms_app_ic_launcher.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="phonegap-version" value="cli-8.0.0" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />

@@ -33,6 +33,12 @@
     },
     "cordova-plugin-photos": {
       "PACKAGE_NAME": "com.phonegap.jerylmidtermsapp"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "com.phonegap.jerylmidtermsapp"
+    },
+    "cordova-sms-plugin": {
+      "PACKAGE_NAME": "com.phonegap.jerylmidtermsapp"
     }
   },
   "dependent_plugins": {
