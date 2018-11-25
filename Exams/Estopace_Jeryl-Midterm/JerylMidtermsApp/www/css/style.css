@@ -10,3 +10,12 @@
 	/* height: 300px;
     width: 300px; */
 }
+
+/* Expanding the Text Area for SMS Messaging */
+textarea#messageTxt.textarea {
+	width: 100%;
+}
+
+/* div.center.toolbar_center.toolbar_title {
+	background: red;
+} */

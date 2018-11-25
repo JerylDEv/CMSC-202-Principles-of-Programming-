@@ -46,5 +46,5 @@
     <plugin name="cordova-plugin-photos" spec="^1.0.8" />
     <plugin name="onesignal-cordova-plugin" spec="^2.4.5" />
     <plugin name="cordova-sms-plugin" spec="^0.1.13" />
-    <engine name="android" spec="~7.1.1" />
+    <engine name="android" spec="^7.1.4" />
 </widget>

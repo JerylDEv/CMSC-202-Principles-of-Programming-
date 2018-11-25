@@ -19,7 +19,7 @@ function onRequestFailure() {
 		cordova.plugins.diagnostic.switchToLocationSettings();
 		document.getElementById('geolocation-button').addEventListener('click', getCurrentLocation);
 	} else {
-		alert(`The Geolocation feature of this app may not work since the Location Mode is not properly set.`);
+		alert(`\nThe Geolocation feature of this app may not work since the Location Mode is not properly set.`);
 	}
 }
 
