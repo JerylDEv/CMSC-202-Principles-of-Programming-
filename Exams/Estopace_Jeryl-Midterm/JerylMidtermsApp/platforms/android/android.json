@@ -51,6 +51,10 @@
             {
               "xml": "<feature name=\"Sms\"><param name=\"android-package\" value=\"com.cordova.plugins.sms.Sms\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -218,6 +222,9 @@
       "PACKAGE_NAME": "com.phonegap.jerylmidtermsapp"
     },
     "cordova-sms-plugin": {
+      "PACKAGE_NAME": "com.phonegap.jerylmidtermsapp"
+    },
+    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.phonegap.jerylmidtermsapp"
     }
   },
@@ -595,6 +602,15 @@
       "clobbers": [
         "window.sms"
       ]
+    },
+    {
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open",
+        "window.open"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -609,6 +625,7 @@
     "cordova-plugin-photo-library": "2.1.1",
     "cordova-plugin-photos": "1.0.8",
     "onesignal-cordova-plugin": "2.4.5",
-    "cordova-sms-plugin": "0.1.13"
+    "cordova-sms-plugin": "0.1.13",
+    "cordova-plugin-inappbrowser": "3.0.0"
   }
 }

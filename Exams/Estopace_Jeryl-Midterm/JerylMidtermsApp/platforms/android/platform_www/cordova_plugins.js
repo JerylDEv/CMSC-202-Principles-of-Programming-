@@ -372,6 +372,15 @@ module.exports = [
     "clobbers": [
       "window.sms"
     ]
+  },
+  {
+    "id": "cordova-plugin-inappbrowser.inappbrowser",
+    "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+    "pluginId": "cordova-plugin-inappbrowser",
+    "clobbers": [
+      "cordova.InAppBrowser.open",
+      "window.open"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -388,7 +397,8 @@ module.exports.metadata =
   "cordova-plugin-photo-library": "2.1.1",
   "cordova-plugin-photos": "1.0.8",
   "onesignal-cordova-plugin": "2.4.5",
-  "cordova-sms-plugin": "0.1.13"
+  "cordova-sms-plugin": "0.1.13",
+  "cordova-plugin-inappbrowser": "3.0.0"
 };
 // BOTTOM OF METADATA
 });

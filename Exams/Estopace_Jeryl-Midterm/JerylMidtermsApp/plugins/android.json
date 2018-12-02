@@ -39,6 +39,9 @@
     },
     "cordova-sms-plugin": {
       "PACKAGE_NAME": "com.phonegap.jerylmidtermsapp"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.phonegap.jerylmidtermsapp"
     }
   },
   "dependent_plugins": {
