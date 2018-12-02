@@ -3,6 +3,24 @@
 	width: 100%;
 }
 
+.left-block {
+	display: inline-block;
+	float: left;
+	/*add this to stick that guy on the right*/
+	position: relative;
+	right: 0;
+	top: 0;
+}
+
+.right-block {
+	display: inline-block;
+	float: right;
+	/*add this to stick that guy on the right*/
+	position: relative;
+	right: 0;
+	top: 0;
+}
+
 .img-center {
 	display: block;
 	margin-left: auto;

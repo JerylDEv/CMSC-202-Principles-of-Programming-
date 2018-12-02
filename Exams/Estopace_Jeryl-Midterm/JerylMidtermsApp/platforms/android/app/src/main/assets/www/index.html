@@ -62,6 +62,8 @@
     <script type="text/javascript" src="js/vibration.js"></script>
     <script type="text/javascript" src="js/camera.js"></script>
     <script type="text/javascript" src="js/smsmessaging.js"></script>
+    <script type="text/javascript" src="js/pushnotification.js"></script>
+    <!-- <script type="text/javascript" src="js/weatherupdate.js"></script> -->
     <!-- Onsen UI -->
     <script type="text/javascript" src="lib/onsenui/js/onsenui.min.js"></script>
 </head>
@@ -136,26 +138,77 @@
                 <div class="expandable-content">
                     <p>
                         <input class="center-block text-input text-input--material" id="numberTxt" placeholder="Enter mobile number"
-                            value="" type="tel" required />
+                            value="" type="tel" />
                     </p>
                     <p>
                         <textarea class="textarea" rows="5" id="messageTxt" placeholder="Enter message"></textarea>
                     </p>
-
                     <p>
-                        <ons-button class="center-block" onclick="app.sendSms()">Send SMS</ons-button>
+                        <ons-button class="center-block" onclick="sendSMS()">Send SMS</ons-button>
                     </p>
                 </div>
             </ons-list-item>
 
             <!-- Cloud Messaging -->
+            <ons-list-item expandable>
+                6) Weather Update
+                <div class="expandable-content">
+                    <p>
+                        <span class="left-block">
+                            City: <input class="text-input text-input--material" id="city_name" placeholder="Enter city name" />
+                        </span>
+                        <select class="right-block text-input--material" id="weather_unit" onchange="">                            
+                            <option value="&units=metric">Celsius</option>
+                            <option value="">Fahrenheit</option>
+                        </select>
+                    </p>
+                    <br>
+                    <p id="hello-sample"></p>
+                    <br>
+                    <p>
+                        <ons-button class="center-block" onclick="displayWeather()">Display Current Weather</ons-button>
+                    </p>
+                    <p>
+                        <ons-button class="center-block" onclick="">Subscribe to get Weather information of the City</ons-button>
+                    </p>
+                </div>
+            </ons-list-item>
 
+            <ons-list-item expandable>
+                7) Push notificationOpenedCallback
+                <div class="expandable-content">
+                    <input type="button" value="Register For Push Notifications iOS" onclick="registerForPushNotification()" />
+                    <br>
+                    <input type="button" value="Get Ids" onclick="getIds()" />
+                    <br>
+                    <input type="button" value="Send Tags" onclick="sendTags()" />
+                    <br>
+                    <input type="button" value="Get Tags" onclick="getTags()" />
+                    <br>
+                    <input type="button" value="Delete Tags" onclick="deleteTags()" />
+                    <br>
+                    <input type="text" placeholder="Email Address" name="email" id="email" />
+                    <br>
+                    <input type="button" value="Set Email" onclick="setEmail()" />
+                    <br>
+                    <input type="button" value="Logout Email" onclick="logoutEmail()" />
+                    <br>
+                    <input type="button" value="Prompt Location" onclick="promptLocation()" />
+                    <br>
+                    <input type="button" value="Sync Hashed Email" onclick="syncHashedEmail()" />
+                    <br>
+                    <input type="button" value="Post Notification" onclick="postNotification()" />
+                    <br>
+                    <input type="button" value="Set Subscription(false)" onclick="setSubscription()" />
+                    <br>
+                </div>
+            </ons-list-item>
 
         </ons-list>
 
-
     </ons-page>
 
+    
     <!-- Battery Status Dialog -->
     <template id="battery-dialog-template.html">
         <ons-dialog id="battery-dialog-id">
@@ -167,6 +220,7 @@
             </div>
         </ons-dialog>
     </template>
+
 
     <!-- Geolocation Dialog -->
     <template id="geolocation-dialog-template.html">
@@ -180,6 +234,20 @@
         </ons-dialog>
     </template>
 
+
+    <!-- Weather Update Dialog -->
+    <template id="weather-update-dialog-template.html">
+        <ons-dialog id="weather-update-dialog-id">
+            <div style="text-align: center; padding: 10px;">
+                <p id="jeryl"></p>
+                <p>
+                    <ons-button onclick="hideDialog('weather-update-dialog-id')">Close</ons-button>
+                </p>
+            </div>
+        </ons-dialog>
+    </template>
+
+    <script type="text/javascript" src="js/weatherupdate.js"></script>
 </body>
 
 </html>

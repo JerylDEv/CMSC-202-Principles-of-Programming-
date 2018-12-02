@@ -89,11 +89,15 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <icon qualifier="hdpi" src="../JerylMidtermsApp/www/res/drawable-hdpi/jeryl_midterms_app_ic_launcher.png" />
     <icon qualifier="mdpi" src="../JerylMidtermsApp/www/res/drawable-mdpi/jeryl_midterms_app_ic_launcher.png" />
+    <icon qualifier="hdpi" src="../JerylMidtermsApp/www/res/drawable-hdpi/jeryl_midterms_app_ic_launcher.png" />
     <icon qualifier="xhdpi" src="../JerylMidtermsApp/www/res/drawable-xhdpi/jeryl_midterms_app_ic_launcher.png" />
     <icon qualifier="xxhdpi" src="../JerylMidtermsApp/www/res/drawable-xxhdpi/jeryl_midterms_app_ic_launcher.png" />
     <icon qualifier="xxxhdpi" src="../JerylMidtermsApp/www/res/drawable-xxxhdpi/jeryl_midterms_app_ic_launcher.png" />
+    <resource-file src="../JerylMidtermsApp/www/res/drawable-hdpi/IconNotificationDefault.png" target="../JerylMidtermsApp/www/res/drawable-hdpi/IconNotificationDefault.png" />
+    <resource-file src="../JerylMidtermsApp/www/res/drawable-xhdpi/IconNotificationDefault.png" target="../JerylMidtermsApp/www/res/drawable-xhdpi/IconNotificationDefault.png" />
+    <resource-file src="../JerylMidtermsApp/www/res/drawable-xxhdpi/IconNotificationDefault.png" target="../JerylMidtermsApp/www/res/drawable-xxhdpi/IconNotificationDefault.png" />
+    <resource-file src="../JerylMidtermsApp/www/res/drawable-xxxhdpi/IconNotificationDefault.png" target="../JerylMidtermsApp/www/res/drawable-xxxhdpi/IconNotificationDefault.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="phonegap-version" value="cli-8.0.0" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
